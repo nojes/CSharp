@@ -10,17 +10,23 @@ namespace cs_1_QE
     {
         int choise;
         string ans;
-        string prefix = "\n [INFO]: ";
 
         public int Choise
         {
             get { return choise; }
         }
 
-        public void Run()
+        public void Welcome()
         {
             Console.Clear();
-            Console.WriteLine("\t Программа решения квадраиных уравнений.");
+            Console.ResetColor();
+            
+            Console.WriteLine();
+            Console.WriteLine("\t +----------------------------------------+");
+            Console.WriteLine("\t | Программа решения квадратных уравнений |");
+            Console.WriteLine("\t +----------------------------------------+");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
         }
 
         public void Stop()
@@ -30,7 +36,6 @@ namespace cs_1_QE
 
         public void DisplayMenu()
         {
-            
             Console.WriteLine(" <1> - Решить новое уравнение.");
             Console.WriteLine(" <2> - Показать журнал вычислений.");
             Console.WriteLine(" <3> - Выйти из программы.");
@@ -45,13 +50,19 @@ namespace cs_1_QE
                 Console.Write("\n [ERROR]: {0}", err.Message);
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
+            finally
+            {
+                Console.ResetColor();
+                Console.WriteLine();
+            }
         }
 
         public bool AllowContinue()
         {
-            Console.Write(prefix + "Продолжать? (y/n)");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Write("\n Продолжать? (y/n)");
             Console.Write("  -> ");
-
+            Console.ResetColor();
             ans = Console.ReadLine();
             return (ans == "y");
         }
