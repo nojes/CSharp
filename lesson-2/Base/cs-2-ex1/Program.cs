@@ -13,8 +13,11 @@ namespace cs_2_ex1
             do {
                 //CheckTriangle();
                 //CheckSeason();
-                RandPrint();
-                PythagoreanTable();
+                //RandPrint();
+                //PythagoreanTable();
+                Array();
+                Matrix();
+                RaggedArray();
             } while (true);
             
         }
@@ -57,9 +60,9 @@ namespace cs_2_ex1
         {
             int month;
 
+            Console.Write(" Number of month -> ");
             try
             {
-                Console.Write(" Number of month -> ");
                 month = Convert.ToInt32(Console.ReadLine());
 
                 switch(month)
@@ -108,8 +111,8 @@ namespace cs_2_ex1
             int num;
             int quantity;
 
+            Console.Write(" Put quantity -> ");
             try {
-                Console.Write(" Put quantity -> ");
                 quantity = Convert.ToInt32(Console.ReadLine());
 
                 for (int i = 0; i < quantity; i++)
@@ -137,6 +140,95 @@ namespace cs_2_ex1
                 {
                     Console.Write(" {0, 4}", (i * j));
                 }
+                Console.WriteLine("\n");
+            }
+        }
+
+        static void Array()
+        {
+            Random r = new Random();
+
+            int size = 0;
+            int[] arr;
+
+            Console.Write(" Put array size -> ");
+            try
+            {
+                size = Convert.ToInt32(Console.ReadLine());
+
+                arr = new int[size];
+
+                for (int i = 0; i < size; i++) {
+                    arr[i] = r.Next(0, 100);
+                }
+
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    RandConsoleColor();
+                    Console.WriteLine(" [{0}] => {1}", i, arr[i]);
+                }
+                Console.WriteLine();
+            }
+            catch (Exception err)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ERROR]: {0} \n", err.Message);
+            }
+            Console.ResetColor(); 
+        }
+
+        static void Matrix()
+        {
+            Random r = new Random();
+
+            int n = 5;
+            int m = 7;
+            int[,] matrix = new int[n, m];
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    matrix[i, j] = r.Next(0, 99);
+                }
+            }
+
+            Console.WriteLine("\t\tM A T R I X");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write(" {0, 4}", matrix[i, j]);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        static void RandConsoleColor()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen + Rand(0, 14);
+        }
+
+        static int Rand(int a, int b)
+        {
+            Random r = new Random();
+            return r.Next(a, b);
+        }
+
+        static void RaggedArray()
+        {
+            const int RAGGED_ARR_SIZE = 3;
+            int[][] raged_array = new int[RAGGED_ARR_SIZE][];
+
+            raged_array[0] = new int[] { 1, 2, 3 };
+            raged_array[1] = new int[] { 4, 5, 6 };
+            raged_array[2] = new int[] { 7, 8, 9 };
+
+            Console.WriteLine("\n\t Ragged array");
+            for (int i = 0; i < RAGGED_ARR_SIZE; i++)
+            {
+                foreach (int elem in raged_array[i])
+                    Console.Write(" {0}", elem);
                 Console.WriteLine("\n");
             }
         }
