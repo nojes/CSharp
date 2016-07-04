@@ -12,7 +12,9 @@ namespace cs_2_ex1
         {
             do {
                 //CheckTriangle();
-                CheckSeason();
+                //CheckSeason();
+                RandPrint();
+                PythagoreanTable();
             } while (true);
             
         }
@@ -97,6 +99,46 @@ namespace cs_2_ex1
                 Console.WriteLine("[ERROR]: {0} \n", err.Message);
             }
             Console.ResetColor();
+        }
+
+        static void RandPrint()
+        {
+            Random r = new Random();
+            
+            int num;
+            int quantity;
+
+            try {
+                Console.Write(" Put quantity -> ");
+                quantity = Convert.ToInt32(Console.ReadLine());
+
+                for (int i = 0; i < quantity; i++)
+                {
+                    num = r.Next(0, 100);
+                    Console.WriteLine("[{0}] => {1}", i, num);
+                }
+                Console.WriteLine();
+            }
+            catch (Exception err)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("[ERROR]: {0} \n", err.Message);
+            }
+            Console.ResetColor();
+        }
+
+        static void PythagoreanTable()
+        {
+            Console.WriteLine("Press any key to print Pythagorean Table ...");
+            Console.ReadLine();
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 1; j < 10; j++)
+                {
+                    Console.Write(" {0, 4}", (i * j));
+                }
+                Console.WriteLine("\n");
+            }
         }
     }
 }
