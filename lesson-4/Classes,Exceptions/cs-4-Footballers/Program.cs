@@ -28,6 +28,53 @@ namespace cs_4_Footballers
                 {
                     case 1:
                         {
+                            // TODO: REFACTORING.
+
+                            int[] heights = new int[30];
+                            string[] sHeights;
+
+                            if (!File.Exists(data_path + file_name)) // Create new file
+                            {
+                                // generate rand heights
+                                Random r = new Random();
+                                string heights_data = "";
+                                for (uint i = 0; i < heights.Length; i++) {
+                                    heights[i] = r.Next(160, 200);
+                                }
+
+                                // convert rand heights to string
+                                heights_data += Convert.ToString(heights[0]);
+                                for (uint i = 1; i < heights.Length; i++) {
+                                    heights_data += " " + Convert.ToString(heights[i]);
+                                }
+
+                                // write to file
+                                FileManager output = new FileManager(data_path, file_name);
+                                output.Write(heights_data);
+
+                                // display file data
+                                Console.WriteLine(output.toString());
+                            }
+                            else // Parse file data
+                            {
+                                // read data from file
+                                FileManager input = new FileManager(data_path, file_name);
+                                input.Read();
+
+                                // display file data
+                                Console.WriteLine(input.toString());
+                                
+                                // parse heights
+                                sHeights = input.Data.Split(' ');
+
+                                // convert heights to string
+                                for (uint i = 0; i < sHeights.Length; i++) {
+                                    heights[i] = Convert.ToInt32(sHeights[i]);
+                                }
+
+                                double avg = heights.Average();
+                                Console.WriteLine("\n Average: {0}", avg);
+                            }
                             break;
                         }
                         
