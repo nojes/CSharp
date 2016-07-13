@@ -19,6 +19,24 @@ namespace cs_5_Fractions
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBoxOp.SelectedIndex = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int a1 = Convert.ToInt32(textBoxA1.Text);
+                int b1 = Convert.ToInt32(textBoxB1.Text);
+                int a2 = Convert.ToInt32(textBoxA2.Text);
+                int b2 = Convert.ToInt32(textBoxB1.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+
         }
     }
 }
