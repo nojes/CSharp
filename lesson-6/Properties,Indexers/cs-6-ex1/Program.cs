@@ -24,6 +24,8 @@ namespace cs_6_ex1
             g.addStudent(s2);
             g.addStudent(s3);
             Console.WriteLine(g.ToString());
+
+            Console.WriteLine(g[2].ToString());
         }
     }
 }

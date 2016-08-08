@@ -48,5 +48,11 @@ namespace cs_6_ex1
 
             return str;
         }
+
+        public Student this[int index]
+        {
+            get { return students[index]; }
+            set { students[index] = value; }
+        }
     }
 }
