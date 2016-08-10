@@ -10,6 +10,17 @@ namespace cs_7_ex3
     {
         static void Main(string[] args)
         {
+            Animal[] animals = new Animal[] {
+                new Fish("Crucian"),
+                new Bird("Gull"),
+                new Frog("Toad")
+            };
+
+            foreach (Animal animal in animals)
+            {
+                Console.Write('\n' + animal.ToString());
+                animal.Breathe();
+            }
         }
     }
 }
