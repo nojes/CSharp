@@ -27,8 +27,17 @@ public class B
 
 **Базовые классы делегатов:**
 1. ```System.Delegate```
+
 2. ```System.MulticastDelegate```
+
 3. ```System.Threading.ThreadStart```
+
 4. ```System.Threading.ParametrizedThreadStart```
+
 5. ```System.AsyncCallback```
+
 6. ```System.EventHandler```
+
+# События
+
+> **Событие (Event)** - объект специального типа, предназначенный для передачи уведомлений о выполнении пользователем или программой определенных действий.
