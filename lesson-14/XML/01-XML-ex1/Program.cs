@@ -67,10 +67,28 @@ namespace _01_XML_ex1
 
 
             // Remove element
-            XmlNode x = root.ChildNodes[2];
-            root.RemoveChild(x);
+            //XmlNode x = root.ChildNodes[2];
+            //root.RemoveChild(x);
+
+            //doc.Save(DATA_ROOT + "data.xml");
+
+            Console.Write("\n Input student lastname: ");
+            string sLastname = Console.ReadLine();
+
+            int k = 0;
+            foreach (XmlNode n in nodes) {
+                if (n.Attributes[2].Value == sLastname) {
+                    break;
+                }
+                k++;
+            }
+
+            Console.Write("\n Input new rate: ");
+            string sRate = Console.ReadLine();
+            nodes[k].Attributes[4].Value = sRate;
 
             doc.Save(DATA_ROOT + "data.xml");
+            Console.WriteLine(" Student {0} modified", sLastname);
         }
     }
 }

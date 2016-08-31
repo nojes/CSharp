@@ -3,5 +3,5 @@
   <student id="1" fname="Vasya" lname="Pupkin" age="21" rate="7.5" />
   <student id="2" fname="Kolya" lname="Pupkin" age="30" rate="5" />
   <student id="4" fname="Petro" lname="Vasichkin" age="23" rate="8.8" />
-  <student id="5" fname="New" lname="Student" age="22" rate="1.23" />
+  <student id="5" fname="New" lname="Student" age="22" rate="10" />
 </students>
