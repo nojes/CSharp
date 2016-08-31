@@ -29,39 +29,47 @@ namespace _01_XML_ex1
                 Console.WriteLine();
             }
 
-            // New element
-            XmlElement s = doc.CreateElement("student");
-            XmlAttribute id = doc.CreateAttribute("id");
-            XmlAttribute fname = doc.CreateAttribute("fname");
-            XmlAttribute lname = doc.CreateAttribute("lname");
-            XmlAttribute age = doc.CreateAttribute("age");
-            XmlAttribute rate = doc.CreateAttribute("rate");
 
-            Console.WriteLine("\n Input data: ");
+            //// New element
+            //XmlElement s = doc.CreateElement("student");
+            //XmlAttribute id = doc.CreateAttribute("id");
+            //XmlAttribute fname = doc.CreateAttribute("fname");
+            //XmlAttribute lname = doc.CreateAttribute("lname");
+            //XmlAttribute age = doc.CreateAttribute("age");
+            //XmlAttribute rate = doc.CreateAttribute("rate");
 
-            // Get 'new element' data 
-            Console.Write(" id: ");
-            id.Value = Console.ReadLine();
-            Console.Write(" fname: ");
-            fname.Value = Console.ReadLine();
-            Console.Write(" lname: ");
-            lname.Value = Console.ReadLine();
-            Console.Write(" age: ");
-            age.Value = Console.ReadLine();
-            Console.Write(" rate: ");
-            rate.Value = Console.ReadLine();
+            //Console.WriteLine("\n Input data: ");
 
-            // Append attributes of 'new element'
-            s.Attributes.Append(id);
-            s.Attributes.Append(fname);
-            s.Attributes.Append(lname);
-            s.Attributes.Append(age);
-            s.Attributes.Append(rate);
+            //// Get 'new element' data 
+            //Console.Write(" id: ");
+            //id.Value = Console.ReadLine();
+            //Console.Write(" fname: ");
+            //fname.Value = Console.ReadLine();
+            //Console.Write(" lname: ");
+            //lname.Value = Console.ReadLine();
+            //Console.Write(" age: ");
+            //age.Value = Console.ReadLine();
+            //Console.Write(" rate: ");
+            //rate.Value = Console.ReadLine();
 
-            // Append 'new element'
-            root.AppendChild(s);
+            //// Append attributes of 'new element'
+            //s.Attributes.Append(id);
+            //s.Attributes.Append(fname);
+            //s.Attributes.Append(lname);
+            //s.Attributes.Append(age);
+            //s.Attributes.Append(rate);
 
-            // Save xml document
+            //// Append 'new element'
+            //root.AppendChild(s);
+
+            //// Save xml document
+            //doc.Save(DATA_ROOT + "data.xml");
+
+
+            // Remove element
+            XmlNode x = root.ChildNodes[2];
+            root.RemoveChild(x);
+
             doc.Save(DATA_ROOT + "data.xml");
         }
     }
