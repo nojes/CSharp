@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<students>
+  <student id="1" fname="Vasya" lname="Pupkin" age="21" rate="7.5"/>
+  <student id="2" fname="Kolya" lname="Pupkin" age="30" rate="5"/>
+  <student id="3" fname="Sveta" lname="Pupkina" age="18" rate="11"/>
+  <student id="4" fname="Petro" lname="Vasichkin" age="23" rate="8.8"/>
+</students>
