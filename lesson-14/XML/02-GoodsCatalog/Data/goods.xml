@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<goods>
+  <stock>
+    <product id="1" category="category" name="name" vendor="vendor" price="1000" quantity="10" />
+  </stock>
+</goods>
