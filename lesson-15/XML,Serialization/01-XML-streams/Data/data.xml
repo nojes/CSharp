@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<goods>
+  <product id="1" title="product 1" category="category 1"/>
+  <product id="2" title="product 2" category="category 2"/>
+  <product id="3" title="product 3" category="category 1"/>
+  <product id="4" title="product 4" category="category 7"/>
+  <product id="5" title="product 5" category="category 4"/>
+  <product id="6" title="product 6" category="category 3"/>
+  <product id="7" title="product 7" category="category 8"/>
+  <product id="8" title="product 8" category="category 2"/>
+</goods>
