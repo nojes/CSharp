@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <product id="1" category="category1" name="name1" vendor="vendor1" price="1000" quantity="10" />
+  <product id="2" category="category2" name="name2" vendor="vendor2" price="584" quantity="15" />
+  <product id="3" category="category4" name="name3" vendor="vendor4" price="786" quantity="1" />
+  <product id="4" category="category3" name="name4" vendor="vendor3" price="786" quantity="20" />
+  <product id="5" category="346346" name="347" vendor="347" price="37" quantity="347" />
+</catalog>
