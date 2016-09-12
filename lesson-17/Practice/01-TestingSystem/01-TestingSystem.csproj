@@ -43,11 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\Answer.cs" />
+    <Compile Include="models\EntityBase.cs" />
+    <Compile Include="models\Group.cs" />
+    <Compile Include="TestController.cs" />
+    <Compile Include="TestManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="models\Question.cs" />
+    <Compile Include="models\Student.cs" />
+    <Compile Include="models\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,6 +10,8 @@ namespace _01_TestingSystem
     {
         static void Main(string[] args)
         {
+            TestController tc = new TestController();
+            
         }
     }
 }
